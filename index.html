@@ -138,6 +138,7 @@ section{padding:0}
 .proof li:first-child{padding-left:0;border-left:0}
 .proof b{font-family:var(--mono);font-weight:500;font-size:30px;line-height:1.2;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 
+.grid3 .tags{flex-wrap:nowrap;white-space:nowrap}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:background .2s,border-color .2s}
@@ -294,43 +295,23 @@ footer .soc a:hover{color:var(--ink)}
   <div class="wrap">
     <h2 class="eyebrow reveal" id="ent-h">Enterprise &middot; Databricks, Snowflake, AWS</h2>
     <div class="grid3">
-<article class="card reveal">
-            <h3>Lakehouse engineering</h3>
-            <ul>
-              <li class="pt">Canada inventory and purchase-order pipelines for North America retail analytics</li>
-              <li class="pt">Daily incremental loads plus an idempotent two-year backfill</li>
-              <li class="pt">Zero regressions on existing US reporting</li>
-            </ul>
-            <ul class="tags"><li>PySpark</li><li>Delta Lake</li><li>Snowflake</li></ul>
-          </article>
-<article class="card reveal">
-            <h3>Cloud cost and platform modernisation</h3>
-            <p class="fig">~$22K <small>a year</small></p>
-            <p>saved in Databricks compute across four teams' heaviest workflows, using AWS Graviton instances and lower autoscale minimums.</p>
-            <ul>
-              <li class="pt">Airflow pipelines migrated to Databricks Workflows across 10 data products, 15+ legacy DAGs retired</li>
-              <li class="pt">~30 workflows upgraded to Databricks Runtime 16.4</li>
-            </ul>
-            <ul class="tags"><li>AWS Graviton</li><li>Databricks Workflows</li><li>Airflow</li></ul>
-          </article>
-<article class="card reveal">
-            <h3>Data quality and observability</h3>
-            <ul>
-              <li class="pt">Automated row-level and aggregate checks with spark-expectations</li>
-              <li class="pt">A shared failure-alerting framework that sends structured errors to Slack, so an internal LLM operations agent can suggest fixes</li>
-              <li class="pt">Alert coverage grown from 1 to 7 data products</li>
-            </ul>
-            <ul class="tags"><li>spark-expectations</li><li>Slack alerting</li></ul>
-          </article>
+      <article class="card reveal">
+        <h3>Lakehouse pipelines</h3>
+        <p>Canada inventory and purchase-order pipelines for North America retail analytics: daily incremental loads and an idempotent two-year backfill, with zero regressions to US reporting.</p>
+        <ul class="tags"><li>PySpark</li><li>Delta Lake</li><li>Snowflake</li></ul>
+      </article>
+      <article class="card reveal">
+        <h3>Platform cost and modernisation</h3>
+        <p class="fig">~$22K <small>saved a year</small></p>
+        <p>Databricks compute across four teams, via AWS Graviton and lower autoscale minimums. Moved 10 data products from Airflow to Workflows, retiring 15+ DAGs.</p>
+        <ul class="tags"><li>Graviton</li><li>Workflows</li><li>Airflow</li></ul>
+      </article>
+      <article class="card reveal">
+        <h3>Quality and alerting</h3>
+        <p>Row-level and aggregate checks with spark-expectations, and a shared alerting framework that sends structured failures to Slack for an LLM ops agent to triage. Coverage grew from 1 to 7 data products.</p>
+        <ul class="tags"><li>spark-expectations</li><li>Slack</li></ul>
+      </article>
     </div>
-    <article class="bridge reveal" aria-label="Product ownership and API engineering">
-      <p>Owning a product from brief to delivery, and building the APIs behind it.</p>
-      <ul class="bstats">
-        <li><b>30%</b>development backlog cut as offshore lead and product owner (ValueMomentum)</li>
-        <li><b>40%</b>faster queries for 300K+ healthcare members' data (Datavid)</li>
-        <li><b>RBAC</b>search and export APIs with role-based access and audit logging</li>
-      </ul>
-    </article>
   </div>
 </section>
 
@@ -380,7 +361,7 @@ footer .soc a:hover{color:var(--ink)}
           <h3><span class="co">Knowledgeforce</span>Senior Data Engineer <span>· client: Nike</span></h3>
           <ul>
             <li>North America retail analytics on Databricks (AWS), PySpark, Delta Lake, Unity Catalog and Snowflake</li>
-            <li>29 analytics views moved to Git-driven CI/CD</li>
+            <li>Cut ~$22K a year in compute and retired 15+ Airflow DAGs; shared alerting and quality checks across 7 data products</li>
           </ul>
         </div>
       </li>
@@ -400,7 +381,7 @@ footer .soc a:hover{color:var(--ink)}
           <h3><span class="co">Datavid</span>Consultant</h3>
           <ul>
             <li>NiFi and MarkLogic pipelines for healthcare data</li>
-            <li>RBAC search and export APIs</li>
+            <li>Search and export APIs on top of the MarkLogic data layer</li>
           </ul>
         </div>
       </li>
