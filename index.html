@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Data architecture. Product execution. Enterprise data systems, and websites launched solo from first brief to live domain.">
 <meta name="twitter:image" content="https://mehulchirania.github.io/assets/og.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Mehul Chirania","jobTitle":"Senior Data Engineer","url":"https://mehulchirania.github.io/","email":"mailto:mehulchirania@gmail.com","sameAs":["https://www.linkedin.com/in/mehulchirania","https://github.com/mehulchirania"]}
+{"@context":"https://schema.org","@type":"Person","name":"Mehul Chirania","jobTitle":"Senior Data Engineer","url":"https://mehulchirania.github.io/","email":"mailto:mehulchirania@gmail.com","sameAs":["https://www.linkedin.com/in/mehul-chirania","https://github.com/mehulchirania"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,10 +187,15 @@ section{padding:0}
 .certs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .cert{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .cert-img{position:relative;aspect-ratio:4/3;background:var(--soft);border-bottom:1px dashed var(--line-2);display:grid;place-items:center;font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center;padding:12px}
-.cert-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cert-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .cert-meta{padding:14px 16px 16px}
 .cert-meta b{display:block;font-weight:510;font-size:15px;color:var(--ink)}
 .cert-meta span{display:block;font-size:13px;color:var(--muted)}
+.cert-link{display:block;color:inherit;height:100%}
+.cert:has(.cert-link){transition:border-color .2s,background .2s}
+.cert:has(.cert-link):hover{border-color:var(--line-2);background:rgba(255,255,255,.04)}
+.verify{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-style:normal;font-size:13px;font-weight:510;color:var(--accent-fg)}
+.verify .ic{width:13px;height:13px}
 .edu{display:flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:var(--text)}
 .edu .ic{color:var(--muted)}
 
@@ -416,11 +421,11 @@ footer .soc a:hover{color:var(--ink)}
   <div class="wrap">
     <h2 class="eyebrow reveal" id="cert-h">Certifications</h2>
     <ul class="certs">
-      <li class="cert reveal"><div class="cert-img">Certificate image<img src="assets/certs/databricks-data-engineer-associate.jpg" alt="Databricks Certified Data Engineer Associate certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Databricks</b><span>Data Engineer Associate</span><span>Jul 2025</span></div></li>
-      <li class="cert reveal"><div class="cert-img">Certificate image<img src="assets/certs/snowflake-snowpro-core.jpg" alt="Snowflake SnowPro Core certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Snowflake</b><span>SnowPro Core</span><span>Sep 2025</span></div></li>
-      <li class="cert reveal"><div class="cert-img">Certificate image<img src="assets/certs/azure-az-900.jpg" alt="Microsoft Azure AZ-900 certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Microsoft</b><span>Azure Fundamentals AZ-900</span><span>Jul 2025</span></div></li>
-      <li class="cert reveal"><div class="cert-img">Certificate image<img src="assets/certs/neo4j-certified-professional.jpg" alt="Neo4j Certified Professional certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Neo4j</b><span>Certified Professional</span><span>Jul 2025</span></div></li>
-      <li class="cert reveal"><div class="cert-img">Certificate image<img src="assets/certs/marklogic-certified-developer.jpg" alt="MarkLogic Certified Developer certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>MarkLogic</b><span>Certified Developer</span><span>Sep 2023</span></div></li>
+      <li class="cert reveal"><a class="cert-link" href="https://credentials.databricks.com/fa662a97-2f48-4536-8cfb-2a9e3f2de8d3#acc.Wf8tPDRB" target="_blank" rel="noopener" aria-label="Verify credential"><div class="cert-img">Certificate image<img src="assets/certs/databricks-data-engineer-associate.jpg" alt="Databricks Certified Data Engineer Associate certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Databricks</b><span>Data Engineer Associate</span><span>Jul 2025</span><em class="verify">Verify <i class="ic ic-out" aria-hidden="true"></i></em></div></a></li>
+      <li class="cert reveal"><a class="cert-link" href="https://achieve.snowflake.com/1527c8f2-08b9-4f2c-9095-87ad4d0d26c8#acc.ZTUFJmwc" target="_blank" rel="noopener" aria-label="Verify credential"><div class="cert-img">Certificate image<img src="assets/certs/snowflake-snowpro-core.jpg" alt="Snowflake SnowPro Core certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Snowflake</b><span>SnowPro Core</span><span>Sep 2025</span><em class="verify">Verify <i class="ic ic-out" aria-hidden="true"></i></em></div></a></li>
+      <li class="cert reveal"><a class="cert-link" href="https://learn.microsoft.com/en-us/users/mehulchirania-5056/credentials/2ff8e7feedf1f91d" target="_blank" rel="noopener" aria-label="Verify credential"><div class="cert-img">Certificate image<img src="assets/certs/azure-az-900.jpg" alt="Microsoft Azure AZ-900 certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Microsoft</b><span>Azure Fundamentals AZ-900</span><span>Jul 2025</span><em class="verify">Verify <i class="ic ic-out" aria-hidden="true"></i></em></div></a></li>
+      <li class="cert reveal"><a class="cert-link" href="https://graphacademy.neo4j.com/c/6298e1f4-4568-4893-9902-36266aae4a34" target="_blank" rel="noopener" aria-label="Verify credential"><div class="cert-img">Certificate image<img src="assets/certs/neo4j-certified-professional.jpg" alt="Neo4j Certified Professional certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>Neo4j</b><span>Certified Professional</span><span>Jul 2025</span><em class="verify">Verify <i class="ic ic-out" aria-hidden="true"></i></em></div></a></li>
+      <li class="cert reveal"><div class="cert-img">Certificate image<img src="assets/certs/marklogic-certified-developer.jpg" alt="MarkLogic Certified Developer certificate" loading="lazy" onerror="this.remove()"></div><div class="cert-meta"><b>MarkLogic</b><span>Certified Developer, Version 12</span><span>Apr 2026</span></div></li>
     </ul>
     <p class="edu reveal"><i class="ic ic-cap" aria-hidden="true"></i>B.Tech, Vellore Institute of Technology (VIT) &middot; 2014 to 2018</p>
   </div>
@@ -431,7 +436,7 @@ footer .soc a:hover{color:var(--ink)}
     <a class="mail reveal" href="mailto:mehulchirania@gmail.com">mehulchirania@gmail.com</a>
     <div class="ctas reveal">
       <a href="mailto:mehulchirania@gmail.com" class="btn btn-dark"><i class="ic ic-mail" aria-hidden="true"></i>Email me</a>
-      <a href="https://www.linkedin.com/in/mehulchirania" target="_blank" rel="noopener" class="btn btn-line"><i class="ic ic-in" aria-hidden="true"></i>LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mehul-chirania" target="_blank" rel="noopener" class="btn btn-line"><i class="ic ic-in" aria-hidden="true"></i>LinkedIn</a>
       <a href="https://github.com/mehulchirania" target="_blank" rel="noopener" class="btn btn-line"><i class="ic ic-gh" aria-hidden="true"></i>GitHub</a>
     </div>
   </div>
@@ -441,7 +446,7 @@ footer .soc a:hover{color:var(--ink)}
 <footer>
   <div class="wrap">
     <span>© 2026 Mehul Chirania · Bengaluru</span>
-    <span class="soc"><a href="https://www.linkedin.com/in/mehulchirania" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/mehulchirania" target="_blank" rel="noopener">GitHub</a><a href="mailto:mehulchirania@gmail.com">Email</a></span>
+    <span class="soc"><a href="https://www.linkedin.com/in/mehul-chirania" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/mehulchirania" target="_blank" rel="noopener">GitHub</a><a href="mailto:mehulchirania@gmail.com">Email</a></span>
   </div>
 </footer>
 
